@@ -1,0 +1,66 @@
+/* Estilos para las tarjetas */
+.card {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-description {
+  display: none;
+}
+
+.card-code {
+  display: none;
+  padding: 10px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.show-code {
+  margin-top: 5px;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Estilos para el botón flotante */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Estilos adicionales para la apariencia */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Estilos para hacer la estructura responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-description,
+  .card-code {
+    margin-top: 15px;
+  }
+}

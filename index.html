@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios de JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+</head>
+<body>
+  <div class="card">
+    <h2 class="card-title">Ejercicio 1</h2>
+    <div class="card-description">
+      <p>Verificar si un número es positivo, negativo o cero.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Pedir al usuario que ingrese un número mediante prompt.</li>
+        <li>Almacenar ese número en una variable descriptiva.</li>
+        <li>Utilizar una estructura if-else para verificar el valor del número.</li>
+        <li>Mostrar el resultado en un console.log() o alert().</li>
+      </ol>
+      <pre class="card-code">
+        <code class="language-javascript">
+          let numero = Number(prompt("Ingresa un número:"));
+
+          if (numero > 0) {
+            console.log("El número es positivo.");
+          } else if (numero < 0) {
+            console.log("El número es negativo.");
+          } else {
+            console.log("El número es cero.");
+          }
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 2</h2>
+    <div class="card-description">
+      <p>Calcular el descuento aplicable a una compra según el monto total.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Pedir al usuario que ingrese el monto total mediante prompt.</li>
+        <li>Almacenar ese monto total en una variable descriptiva.</li>
+        <li>Utilizar una estructura if-else para determinar el descuento según el monto total.</li>
+        <li>Aplicar el 20% de descuento si el monto es igual o mayor a 1000</li>
+        <li>Aplicar el 10% de descuento si el monto es igual o mayor a 500 pero menor a 1000</li>
+        <li>Mostrar el resultado en un console.log() o alert().</li>
+      </ol>
+      <pre class="card-code">
+        <code class="language-javascript">
+          let montoTotal = Number(prompt("Ingrese el monto total de la compra:"));
+
+          // Una buena práctica es inicializar la variable descuento con un valor
+          let descuento = 0;
+
+          if (montoTotal >= 1000) {
+            descuento = 0.2 * montoTotal; // 20% de descuento si el monto es igual o mayor a 1000
+          } else if (montoTotal >= 500) {
+            descuento = 0.1 * montoTotal; // 10% de descuento si el monto es igual o mayor a 500 pero menor a 1000
+          }
+
+          console.log("El descuento aplicable es de: " + descuento + " unidades monetarias.");
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 3</h2>
+    <div class="card-description">
+      <p>Verificar si un número es par o impar.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Solicitar al usuario que ingrese un número entero mediante prompt.</li>
+        <li>Almacenar el número ingresado en una variable llamada `numero`.</li>
+        <li>Utilizar el operador de módulo `%` para calcular el resto de la división de `numero` entre 2.</li>
+        <li>Verificar si el resto es igual a 0.</li>
+        <li>Si el resto es igual a 0, imprimir en la consola "El número es par".</li>
+        <li>De lo contrario, imprimir en la consola "El número es impar".</li>
+      </ol>
+      <pre class="card-code">
+        <code class="language-javascript">
+          let numero = parseInt(prompt("Ingresa un número:"));
+
+          // Utilizamos el operador de módulo (%) para verificar si el número es par o impar
+          if (numero % 2 === 0) {
+            console.log("El número es par.");
+          } else {
+            console.log("El número es impar.");
+          }
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 4</h2>
+    <div class="card-description">
+      <p>Determinar si una contraseña ingresada es correcta.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Establecer una contraseña correcta y almacenarla en una variable llamada `contraseniaCorrecta`.</li>
+        <li>Solicitar al usuario que ingrese una contraseña.</li>
+        <li>Almacenar la contraseña ingresada en una variable llamada `contraseniaIngresada`.</li>
+        <li>Comparar si `contraseniaIngresada` es igual a `contraseniaCorrecta`.</li>
+        <li>Si las contraseñas son iguales, imprimir en la consola "¡Contraseña correcta! Acceso concedido".</li>
+        <li>De lo contrario, imprimir en la consola "Contraseña incorrecta. Acceso denegado".</li>
+      </ol>
+      <pre class="card-code">
+        <code class="language-javascript">
+          const contraseniaCorrecta = "secreto123"; // Contraseña correcta
+
+          let contraseniaIngresada = prompt("Ingresa la contraseña:");
+
+          // Utilizamos una estructura if-else para verificar si la contraseña ingresada es correcta
+          if (contraseniaIngresada === contraseniaCorrecta) {
+            console.log("¡Contraseña correcta! Acceso concedido.");
+          } else {
+            console.log("Contraseña incorrecta. Acceso denegado.");
+          }
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 5</h2>
+    <div class="card-description">
+      <p>Asignar una calificación según la puntuación obtenida en un examen.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Solicitar al usuario que ingrese la puntuación obtenida en el examen.</li>
+        <li>Almacenar la puntuación ingresada en una variable llamada <b>puntuacion</b>.</li>
+        <li>Utilizar una estructura if-else para evaluar la puntuación según los siguientes rangos:
+          <ul>
+            <li>Si <b>puntuacion</b> es mayor o igual a 90, asignar la calificación "A".</li>
+            <li>Si <b>puntuacion</b> es mayor o igual a 80, asignar la calificación "B".</li>
+            <li>Si <b>puntuacion</b> es mayor o igual a 70, asignar la calificación "C".</li>
+            <li>Si <b>puntuacion</b> es mayor o igual a 60, asignar la calificación "D".</li>
+            <li>De lo contrario, asignar la calificación "F".</li>
+          </ul>
+        </li>
+        <li>Imprimir en la consola la calificación obtenida.</li>
+      </ol>
+      <pre class="card-code">
+        <code class="language-javascript">
+          let puntuacion = Number(prompt("Ingresa la puntuación obtenida:"));
+
+          let calificacion;
+
+          // Utilizamos una estructura if-else para asignar la calificación según la puntuación
+          if (puntuacion >= 90) {
+            calificacion = "A";
+          } else if (puntuacion >= 80) {
+            calificacion = "B";
+          } else if (puntuacion >= 70) {
+            calificacion = "C";
+          } else if (puntuacion >= 60) {
+            calificacion = "D";
+          } else {
+            calificacion = "F";
+          }
+
+          console.log("La calificación obtenida es: " + calificacion);
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <a class="floating-button" target="_blank" href="https://github.com/anthonytrillo/javascript-basics-exercises/issues">Reporta un problema</a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
