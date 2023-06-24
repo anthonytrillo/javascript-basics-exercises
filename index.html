@@ -60,16 +60,13 @@
       <pre class="card-code">
         <code class="language-javascript">
           let montoTotal = Number(prompt("Ingrese el monto total de la compra:"));
-
           // Una buena práctica es inicializar la variable descuento con un valor
           let descuento = 0;
-
           if (montoTotal >= 1000) {
             descuento = 0.2 * montoTotal; // 20% de descuento si el monto es igual o mayor a 1000
           } else if (montoTotal >= 500) {
             descuento = 0.1 * montoTotal; // 10% de descuento si el monto es igual o mayor a 500 pero menor a 1000
           }
-
           console.log("El descuento aplicable es de: " + descuento + " unidades monetarias.");
         </code>
       </pre>
@@ -93,7 +90,6 @@
       <pre class="card-code">
         <code class="language-javascript">
           let numero = parseInt(prompt("Ingresa un número:"));
-
           // Utilizamos el operador de módulo (%) para verificar si el número es par o impar
           if (numero % 2 === 0) {
             console.log("El número es par.");
@@ -122,9 +118,7 @@
       <pre class="card-code">
         <code class="language-javascript">
           const contraseniaCorrecta = "secreto123"; // Contraseña correcta
-
           let contraseniaIngresada = prompt("Ingresa la contraseña:");
-
           // Utilizamos una estructura if-else para verificar si la contraseña ingresada es correcta
           if (contraseniaIngresada === contraseniaCorrecta) {
             console.log("¡Contraseña correcta! Acceso concedido.");
@@ -159,9 +153,7 @@
       <pre class="card-code">
         <code class="language-javascript">
           let puntuacion = Number(prompt("Ingresa la puntuación obtenida:"));
-
           let calificacion;
-
           // Utilizamos una estructura if-else para asignar la calificación según la puntuación
           if (puntuacion >= 90) {
             calificacion = "A";
@@ -176,6 +168,285 @@
           }
 
           console.log("La calificación obtenida es: " + calificacion);
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 6</h2>
+    <div class="card-description">
+      <p>Generar una secuencia de números pares.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Define una variable llamada <b>n</b> y asígnale un número entero positivo.</li>
+        <li>Utiliza un ciclo <b>for</b> para iterar desde 0 hasta <b>n</b> (inclusive), incrementando en 2 en cada iteración.</li>
+        <li>En cada iteración, muestra el número actual.</li>
+      </ol>
+      <pre class="card-code">
+        <!-- <button class="show-comments">Ver comentarios</button> -->
+        <code class="language-javascript">
+          const n = 10;
+
+          for (let i = 0; i <= n; i += 2) {
+            console.log(i);
+          }
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 7</h2>
+    <div class="card-description">
+      <p>Suma de los primeros N números.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Define una variable llamada <b>n</b> y asígnale un número entero positivo.</li>
+        <li>Declara una variable llamada <b>suma</b> y asígnale el valor 0.</li>
+        <li>Utiliza un ciclo <b>for</b> para iterar desde 1 hasta <b>b</b>, incrementando en 1 en cada iteración.</li>
+        <li>En cada iteración, suma el número actual al valor de <b>suma</b>.</li>
+        <li>Al finalizar el ciclo, muestra el valor de <b>suma</b>.</li>
+      </ol>
+      <pre class="card-code">
+        <!-- <button class="show-comments">Ver comentarios</button> -->
+        <code class="language-javascript">
+          const n = 5;
+          let suma = 0;
+
+          for (let i = 1; i <= n; i++) {
+            suma += i;
+          }
+
+          console.log("La suma de los primeros " + n + " números es: " + suma);
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Juego conteo ascendente</h2>
+    <div class="card-description">
+      <p>Conteo Ascendente de 2 en 2</p>
+      <p>Instrucciones:</p>
+      <ol>
+        <li>El juego consiste en un conteo ascendente de 2 en 2.</li>
+        <li>El jugador debe adivinar el número siguiente en cada iteración del ciclo <b>for</b>.</li>
+        <li>Si el jugador adivina correctamente, se le dará un punto. Si no, se le restará un punto.</li>
+        <li>En cada iteración, suma el número actual al valor de <b>suma</b>.</li>
+        <li>Al final del juego, se mostrará la puntuación obtenida.</li>
+      </ol>
+      <pre class="card-code">
+        <button id="first-game">Jugar</button>
+        <code class="language-javascript">
+          alert("¡Bienvenido a 'Conteo Ascendente de 2 en 2'!");
+          alert("El juego consiste en adivinar los números en el conteo ascendente.");
+
+          let puntuacion = 0;
+
+          for (let i = 0; i <= 10; i += 2) {
+            const respuesta = parseInt(prompt("Siguiente número: " + i + ". Adivina el número siguiente:"));
+
+            if (respuesta === i + 2) {
+              alert("¡Correcto! Ganaste 1 punto.");
+              puntuacion++;
+            } else {
+              alert("Incorrecto. El número siguiente era: " + (i + 2));
+              puntuacion--;
+            }
+          }
+
+          alert("Fin del juego. Tu puntuación final es: " + puntuacion);
+        </code>
+      </pre>
+      <button class="show-game">Ver código del juego</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 8</h2>
+    <div class="card-description">
+      <p>Verificar si un número es <a href="https://es.wikipedia.org/wiki/N%C3%BAmero_primo" target="_blank">Primo</a>.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Define una variable llamada <b>numero</b> y asígnale un número entero positivo mayor que 1.</li>
+        <li>Declara una variable booleana llamada <b>esPrimo</b> y asígnale el valor <b>true</b>.</li>
+        <li>Utiliza un ciclo <b>for</b> para iterar desde 2 hasta la mitad del valor de <b>numero</b>.</li>
+        <li>En cada iteración, verifica si <b>numero</b> es divisible por el número actual del ciclo.</li>
+        <li>Si <b>numero</b> es divisible por algún número, asigna el valor <b>false</b> a <b>esPrimo</b> y detén el ciclo utilizando <b>break</b>.</li>
+        <li>Después del ciclo, verifica el valor de <b>esPrimo</b>:
+          <ul>
+            <li>Si <b>esPrimo</b> es <b>true</b>, muestra un mensaje indicando que el número es primo.</li>
+            <li>Si <b>esPrimo</b> es <b>false</b>, muestra un mensaje indicando que el número no es primo.</li>
+          </ul>
+        </li>
+      </ol>
+      <pre class="card-code">
+        <!-- <button class="show-comments">Ver comentarios</button> -->
+        <code class="language-javascript">
+          const numero = 17;
+          let esPrimo = true;
+
+          for (let i = 2; i <= numero / 2; i++) {
+            if (numero % i === 0) {
+              esPrimo = false;
+              break;
+            }
+          }
+
+          if (esPrimo) {
+            console.log(numero + " es un número primo.");
+          } else {
+            console.log(numero + " no es un número primo.");
+          }
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 9</h2>
+    <div class="card-description">
+      <p>Generar una secuencia de <a href="https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci" target="_blank">Fibonacci</a>.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Define una variable llamada <b>n</b> y asígnale un número entero positivo mayor que 1.</li>
+        <li>Declara dos variables llamadas <b>a</b> y <b>b</b> y asígnales los valores 0 y 1, respectivamente.</li>
+        <li>Utiliza un ciclo <b>for</b> para iterar <b>n</b> veces, iniciando en 1.</li>
+        <li>En cada iteración, actualiza el valor de <b>a</b> sumándole el valor actual de <b>b</b>.</li>
+        <li>Actualiza el valor de <b>b</b> asignándole el valor anterior de <b>a</b>.</li>
+      </ol>
+      <pre class="card-code">
+        <!-- <button class="show-comments">Ver comentarios</button> -->
+        <code class="language-javascript">
+          const n = 10;
+          let a = 0;
+          let b = 1;
+
+          for (let i = 1; i < n; i++) {
+            a = a + b;
+
+            b = a - b;
+
+            console.log(a);
+          }
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 10</h2>
+    <div class="card-description">
+      <p>Contador regresivo.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Solicita al usuario que ingrese un número entero positivo.</li>
+        <li>Inicializa una variable <b>contador</b> con el valor ingresado por el usuario.</li>
+        <li>Mientras el valor de <b>contador</b> sea mayor o igual a 0:
+          <ul>
+            <li>Imprime el valor actual de <b>contador</b>.</li>
+            <li>Decrementa el valor de <b>contador</b> en 1.</li>
+          </ul>
+        </li>
+        <li>Imprime un mensaje indicando que el contador ha finalizado.</li>
+      </ol>
+      <pre class="card-code">
+        <!-- <button class="show-comments">Ver comentarios</button> -->
+        <code class="language-javascript">
+          let numero = parseInt(prompt("Ingresa un número entero positivo:"));
+          let contador = numero;
+
+          while (contador >= 0) {
+            console.log(contador);
+            contador--;
+          }
+
+          console.log("¡Contador finalizado!");
+        </code>
+      </pre>
+      <button class="show-code">Ver solución</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="card-title">Ejercicio 11</h2>
+    <div class="card-description">
+      <p>Carrito de compras.</p>
+      <p>Pasos:</p>
+      <ol>
+        <li>Inicializar las variables producto, precioTotal, cantidadTotal y seguirComprando.</li>
+        <li>Iniciar un ciclo do-while.</li>
+        <li>Solicitar al usuario que ingrese el producto que desea comprar.</li>
+        <li>Solicitar al usuario que ingrese la cantidad deseada del producto.</li>
+        <li>Validar si la cantidad ingresada es un número válido y mayor que cero. En caso contrario, mostrar un mensaje de error y volver al paso 4.</li>
+        <li>Establecer la variable precio en 0.</li>
+        <li>Utilizar un switch statement para asignar el precio correspondiente según el producto seleccionado.</li>
+        <li>Calcular el precio total del producto multiplicando el precio por la cantidad.</li>
+        <li>Actualizar el precio total acumulativo sumándole el precio total del producto y la cantidad total acumulativa sumándole la cantidad.</li>
+        <li>Mostrar un mensaje al usuario indicando la cantidad de productos agregados y el total a pagar por el producto actual.</li>
+        <li>Preguntar al usuario si desea agregar otro producto. Si no desea agregar otro producto, continuar al paso 12. Si desea agregar otro producto, repetir el ciclo desde el paso 3.</li>
+        <li>Preguntar al usuario si desea finalizar la compra.</li>
+        <li>Si el usuario decide finalizar la compra, mostrar un mensaje con el resumen de la compra (cantidad total de productos y precio total). Si no desea finalizar la compra, mostrar un mensaje de despedida.</li>
+      </ol>
+      <pre class="card-code">
+        <!-- <button class="show-comments">Ver comentarios</button> -->
+        <code class="language-javascript">
+          let producto = "";
+          let precioTotal = 0;
+          let cantidadTotal = 0;
+          let seguirComprando = true;
+
+          do {
+            producto = prompt("¿Querés comprar shampoo, acondicionador o desodorante?", "Ej: shampoo");
+
+            let cantidad = parseInt(prompt("¿Cuántos querés comprar?"));
+
+            while (isNaN(cantidad) || cantidad <= 0) {
+              alert("Debés agregar una cantidad válida.");
+              cantidad = parseInt(prompt("¿Cuántos querés comprar?"));
+            }
+
+            let precio = 0;
+
+            switch (producto) {
+              case "shampoo":
+                precio = 900;
+                break;
+              case "acondicionador":
+                precio = 1000;
+                break;
+              case "desodorante":
+                precio = 600;
+                break;
+              default:
+                alert("El producto ingresado no es válido");
+                continue;
+            }
+
+            let precioTotalProducto = precio * cantidad;
+            precioTotal += precioTotalProducto;
+            cantidadTotal += cantidad;
+
+            alert('Has agregado '+cantidad+' '+producto+'(s)'+' al carrito. Total a pagar: $'+precioTotalProducto);
+
+            seguirComprando = confirm("¿Querés agregar otro producto?");
+
+            if (!seguirComprando) {
+              let finalizarCompra = confirm("¿Desea finalizar la compra?");
+
+              if (finalizarCompra) {
+                alert('Has comprado un total de '+cantidadTotal+' producto(s)'+' por un total de $'+precioTotal+'. '+' ¡Gracias por tu compra!');
+              } else {
+                alert("Esperamos volver a verte pronto. ¡Hasta luego!");
+              }
+            }
+          } while (seguirComprando);
         </code>
       </pre>
       <button class="show-code">Ver solución</button>

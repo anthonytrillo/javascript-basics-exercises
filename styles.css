@@ -49,6 +49,10 @@ body {
   margin: 20px;
 }
 
+/* .card-code code.language-javascript .comment {
+  display: none;
+} */
+
 /* Estilos para hacer la estructura responsive */
 @media (max-width: 768px) {
   .card {
